@@ -5,7 +5,51 @@
 </head>
 
 <body>
-  <p>Welkom!</p>
+  <h1>Recursie</h2>
 
-  </body>
+  <p>Welkom bij het vak Algoritmiek 2! Deze eerste week gaan we kijken naar een belangrijke techniek die we voor alle komende weken weer gaan gebruiken. Recursie! In dit dictaat vind je alle opdrachten voor dit vak. Je mag zelf een programmeertaal kiezen om de opdrachten te maken als er geen taal genomend is</p>
+
+  <div class="assignment">
+    <h2>Pyramide probleem</h2>
+
+    <img src="static/img/triangle_numbers.png">
+
+    <p>Deze opdracht gaan we kijken naar <a href="https://nl.wikipedia.org/wiki/Driehoeksgetal">driehoeksgetallen</a>. De functie <img src="http://latex.codecogs.com/svg.latex?$driehoeksgetal$(n)"> is gedefinieerd als <img src="http://latex.codecogs.com/svg.latex?n + (n-1) + (n-2) + ... + 3 + 2  + 1">. Bijvoorbeeld: <img src="http://latex.codecogs.com/svg.latex?$driehoeksgetal$(6) = 6 + 5 + 4 + 3 + 2 + 1 + 0 = 21">. Je kan dit ook zien als het aantal balletjes in een pyramide die 6 laagjes hoog is</p>. Je kan de functie ook recursief definiëren als: <img src="http://latex.codecogs.com/svg.latex?$driehoeksgetal$(n) = n + $driehoeksgetal$(n - 1), $driehoeksgetal$(0) = 0"></p>
+
+    <ol>
+      <li>Schrijf de functie op een iteratieve manier (dus met een loopje)</li>
+      <li>Schrijf de functie op een recursieve manier</li>
+      <li>Test beide functie met grote waardes voor <code>n</code>, is er een functie die sneller is? Zo ja, welke?</li>
+    </ol>
+  </div>
+
+  <div class="assignment">
+    <h2>Fibonacci</h2>
+
+    <img src="static/img/fibonacci.png">
+
+    <p>De rij van Fibonacci krijg je door elke keer de vorige twee cijfers bij elkaar op te tellen, je begint de rij met 0 en 1:</p>
+
+    <img src="http://latex.codecogs.com/svg.latex?0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...">
+
+    <ol>
+      <li>Bedenk hoe je de functie recursief kan definiëren (begin met <img src="http://latex.codecogs.com/svg.latex?$fibonacci$(0) = 0">)</li>
+      <li>Schrijf de functie op zowel een iteratieve als een recursieve manier</li>
+      <li>Test weer beide functies met grote waardes, welke manier is sneller? Waarom is dat zo?</li>
+    </ol>
+  </div>
+
+  <div class="assignment">
+    <h2>Tapijt van Sierpinski</h2>
+    <img src="static/img/sierpinski_carpet.gif">
+
+    <p>Het <a href="https://nl.wikipedia.org/wiki/Tapijt_van_Sierpi%C5%84ski">Tapijt van Sierpiński</a> is een <a href="https://nl.wikipedia.org/wiki/Fractal">fractal</a> die je kan maken door acht vierkanten te tekenen rondom een middelste vierkant dat je niet tekent. Dit herhaal je ad infinitum voor elk van deze subvierkanten. (Er is ook een versie waarbij je juist alleen maar het middelste vierkant tekent, maar daar staan al teveel voorbeelden van op internet ;) ).
+
+    <ol>
+      <li>Maak een klein programmaatje dat het Sierpinski tapijt kan weergeven. De gebruiker moet kunnen aangeven hoeveel "niveau's" van het tapijt worden getekend.</li>
+      <li>Hoeveel niveau's kan jouw computer aan? Hoeveel vierkantjes moet het dan tekenen?</li>
+    </ol>
+  </div>
+
+</body>
 </html>
