@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="alg2">
+  <head>
+    <meta charset="utf-8">
+    <title>Algoritmiek 2</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="http://www.avans.nl/favicon.64.png">
+
+    <script src="static/js/jquery-1.9.1.js"></script>
+    <script src="http://advans-dev.herokuapp.com/js/pointypony.js"></script>
+    <script src="app/app.js"></script>
+    <script src="static/js/jquery-ui.js"></script>
+  </head>
+
+  <body updatelinks>
+
+    <div class="navbar navbar-fixed-top" ng-controller="authCtrl">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="index.html">Algoritmiek 2</a>
+
+           <ul class="nav pull-right" ng-show="user">
+              <li><button class="btn" id="logout" ng-click="logout()">Uitloggen</button></li>
+              <li><p id="logged_in_name" class="nav navbar-text">Ingelogd als {{user.name}}</p></li>
+              <li><p id="points" class="nav navbar-text">{{user.points}} punten</p></li>
+            </ul>
+
+            <ul class="nav pull-right" ng-hide="user">
+              <li><button class="btn" id="login" ng-click="login()">Inloggen</button></li>
+            </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container-fluid" style="margin-top: 60px">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list" id="theory">
+              <li><a href="#recursie.html">Week 1. Recursie</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <article class="span9" id="content" ui-view>
+            Welkom
+        </article><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>2015 Avans</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+  </body>
+</html>
