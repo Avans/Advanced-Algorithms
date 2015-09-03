@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sorting</title>
+</head>
+
+<body>
+  <h1>Quicksort &amp; Mergesort</h2>
+
+  <p>Deze week gaan we kijken naar twee van de meest gebruikte sorteeralgoritmes in de 'echte wereld': quicksort en mergesort. Deze worden vaak omschreven als de snelle sorteeralgoritmes die in O(n*log(n)) tijd een lijst kunnen sorteren. Of ze in de praktijk echt sneller zijn gaan we deze week testen in een klein onderzoekje.</p>
+
+  <div class="assignment">
+    <h2>Battle of the algorithms</h2>
+    <img src="static/img/stopwatch.png" class="right">
+
+    <p><i>2 soorten inputs, 4 algoritmes, 1000 elementen: wie kan het snelst sorteren, met het minst aantal swaps en vergelijkingen?</i></p>
+
+    <p>De opdracht deze week is om onderstaande tabel over te nemen en in te vullen. Je mag de algoritmes zelf schrijven, maar je mag je ook laten 'inspireren' door wat er op internet te vinden is. Uiteraard moet je alle code wel goed begrijpen om de opdracht te kunnen maken.</p>
+
+    <p>We gaan vier algoritmes testen: quicksort, quicksort3, mergesort en bubblesort. Zorg ervoor dat quicksort altijd de meest linkse waarde als de pivot kiest en quicksort3 de mediaan van de eerste, de laatste en de middelste waarde als pivot kiest. Test voor elk algoritme ook twee soorten input: een array van 1000 elementen die al volledig gesorteerd is, en een array van 1000 elementen die in een random volgorde staan.</p>
+
+    <p>Voor elk algoritme en elke input test je de volgende eigenschappen:</p>
+
+    <p>
+      <b>Aantal vergelijkingen</b><br>
+      Hierbij tel je alle vergelijkingen die je doet tussen elementen van de input. Het gaat dus alleen maar om groter dan / kleiner dan vergelijkingen die te maken hebben met de waardes die in de input array staan. Alle andere vergelijkingen die je doet met bijvoorbeeld lokale variabele hoef je niet mee te tellen.
+    </p>
+
+    <p>
+      <b>Aantal swaps</b><br>
+      Een swap is elke keer als je een waarde wegschrijft in de input array of twee elementen in de input array omdraait. Een waarde wegschrijven in een kopie van de array of in een hulp array telt ook als een swap.
+    </p>
+
+    <p>
+      <b>Uitvoertijd</b><br>
+      Dit is hoeveel secondes het algoritme er over doet om te sorteren. Waarschijnlijk zal dit te snel gaan om nauwkeurig te meten. Als je het algoritme een miljoen keer uitvoert en dan de tijd deelt door een miljoen krijg je een nauwkeurige uitkomst.
+    </p>
+
+    <table class="table table-bordered">
+      <tr>
+        <th></th>
+        <th colspan="2">Quicksort</th>
+        <th colspan="2">Quicksort3</th>
+        <th colspan="2">Mergesort</th>
+        <th colspan="2">Bubblesort</th>
+      </tr>
+      <tr>
+        <th></th>
+        <td>gesorteerd</td>
+        <td>geshuffled</td>
+        <td>gesorteerd</td>
+        <td>geshuffled</td>
+        <td>gesorteerd</td>
+        <td>geshuffled</td>
+        <td>gesorteerd</td>
+        <td>geshuffled</td>
+      </tr>
+      <tr>
+        <th>Aantal vergelijkingen</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>Aantal swaps</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>Uitvoertijd</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <p>Leg kort het verschil tussen de resultaten van quicksort en quicksort3 uit.</p>
+  </div>
+
+</body>
+</html>
