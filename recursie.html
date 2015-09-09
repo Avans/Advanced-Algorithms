@@ -25,7 +25,8 @@
 
     <ol>
       <li>Schrijf de driehoeksgetalfunctie op een iteratieve manier (dus met een loopje)</li>
-      <li>Schrijf de functie op een recursieve manier</li>
+      <li>Schrijf de functie op een recursieve manier.
+      Gebruik geen extra parameters of instance variables: <code>public int driehoek(int n)</code>. De functie mag alleen gebruik maken van zichzelf.</li>
       <li>Schrijf de functie zonder loopjes en recursie. Op de wikipagina staat een formule waarmee je driehoeksgetallen kan berekenen.</li>
       <li>Test alledrie de functies met grote waardes voor <code>n</code>. Welke manier is het snelst? Welke het langzaamst?</li>
     </ol>
@@ -43,7 +44,8 @@
 
     <ol>
       <li>Leg kort uit hoe je de functie op een recursieve manier kan definiëren (gebruik de versie waarbij <img src="http://latex.codecogs.com/svg.latex?$fibonacci$(0) = 0"> en <img src="http://latex.codecogs.com/svg.latex?$fibonacci$(1) = 1">)</li>
-      <li>Schrijf de functie in code op zowel een iteratieve als een recursieve manier</li>
+      <li>Schrijf de functie in code op zowel een iteratieve als een recursieve manier. 
+      Gebruik geen extra parameters of instance variables: <code>public int fibonacci(int n)</code>. De functie mag alleen gebruik maken van zichzelf.</li>
       <li>Test weer beide functies met grote waardes. Welke manier is sneller? Waarom is dat zo?</li>
     </ol>
   </div>
@@ -53,14 +55,14 @@
 
     <img src="static/img/mirror.png" class="right">
 
-    <p>Niet alle recursieve functies zijn saaie rijtjes met getallen. We kunnen ze ook gebruiken om bijvoorbeeld een String om te draaien. Dit kan je doen door de laatste letter te printen en vervolgens een recursieve aanroep te doen met de string zonder de laatste letter.</p>
+    <p>Niet alle recursieve functies zijn saaie rijtjes met getallen. We kunnen ze ook gebruiken om bijvoorbeeld een String om te draaien. Dit kan je doen door de laatste letter geconcateneerd met de recursieve aanroep met de string zonder de laatste letter terug te geven.</p>
 
-    <p>Bijvoorbeeld: Als je wordt aangeroepen met <code>omgedraaid("Paul")</code> print je de l en roep je recursief <code>omgedraaid("Pau")</code> aan.</p>
+    <p>Bijvoorbeeld: Als je wordt aangeroepen met <code>omgedraaid("Paul")</code> return je "l" met wat <code>omgedraaid("Pau")</code> teruggeeft er achter geplakt.</p>
 
     <ol>
-      <li>Schrijf een recursieve functie die een String als invoer heeft en de omgekeerde string teruggeeft</li>
-      <li>Wat is de base case van deze functie?</li>
-      <li>Schrijf een recursieve functie die als boolean teruggeeft of een woord een <a href="https://nl.wikipedia.org/wiki/Palindroom">palindroom</a> is of niet.</li>
+      <li>Schrijf een recursieve functie <code>public String omgedraaid(String s);</code> die een String als invoer heeft en de omgekeerde string teruggeeft. </li>
+      <li>Wat is de base case van deze functie? (dus het kleinste probleem geval waarbij je niet jezelf meer hoeft aan te roepen)</li>
+      <li>Schrijf een recursieve functie <code>public boolean isPalindroom(String s);</code> die teruggeeft of een woord een <a href="https://nl.wikipedia.org/wiki/Palindroom">palindroom</a> is of niet. Die functie mag weer alleen gebruik maken van zichzelf.</li>
     </ol>
   </div>
 
