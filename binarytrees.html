@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Binary Trees</title>
+</head>
+
+<body>
+  <h1>Binary Trees</h2>
+
+  <p>Tijd voor het 'datastructuren' gedeelte van het vak Algoritmiek en Datastructuren 2.</p>
+
+  <div class="assignment">
+    <h2>Binary Search Trees</h2>
+    <img src="static/img/bst.png" class="right">
+
+    <p>
+    - Neem de broncode over<br>
+    - Implementeer de methodes op een recursieve manier<br>
+    </p>
+
+
+    <a href="https://github.com/Avans/Algoritmiek-2/tree/gh-pages/src/BST.java">BST.java</a><br>
+    <a href="https://github.com/Avans/Algoritmiek-2/tree/gh-pages/src/BSTNode.java">BSTNode.java</a><br>
+
+    <i>Extra uitdaging, geen huiswerk:</i> maak een methode die een waarde verwijderd uit de binary search tree<br>
+  </div>
+
+  <div class="assignment">
+    <h2>Abstract Syntax Tree</h2>
+    <img src="static/img/ast.png" class="right">
+
+    <p>Trees worden ook gebruikt door compilers om een representatie op te bouwen van de structuur van broncode.</p>
+
+    Neem deze broncode over:
+    <pre>
+    Number vier = new Number(4);
+    Number vijf = new Number(5);
+    Operand vier_plus_vijf = new Operand('+', vier, vijf);
+
+    Number zeven = new Number(7);
+    Operand dat_keer_zeven = new Operand('*', vier_plus_vijf, zeven);
+
+    System.out.println(dat_keer_zeven.toString()); // ((4+5)*7)
+    System.out.println(dat_keer_zeven.evaluate()); // 63
+    </pre>
+    En zorg ervoor dat deze werkt.
+  </div>
+</body>
+</html>
