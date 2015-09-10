@@ -1,13 +1,15 @@
+package bstempty;
+
 public class BSTNode {
 	private int number;
-
+	
 	private BSTNode left;
 	private BSTNode right;
-
+	
 	public BSTNode(int number) {
 		this.number = number;
 	}
-
+	
 	/**
 	 * Add a number in the subtree of this node
 	 */
