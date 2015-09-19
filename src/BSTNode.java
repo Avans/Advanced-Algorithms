@@ -2,14 +2,14 @@ package bstempty;
 
 public class BSTNode {
 	private int number;
-	
+
 	private BSTNode left;
 	private BSTNode right;
-	
+
 	public BSTNode(int number) {
 		this.number = number;
 	}
-	
+
 	/**
 	 * Add a number in the subtree of this node
 	 */
@@ -28,6 +28,22 @@ public class BSTNode {
 			} else {
 				this.right.insert(number);
 			}
+		}
+	}
+
+	public void prettyprint(String firstPrefix, String prefix) {
+		System.out.println(firstPrefix + number);
+
+		if (right == null) {
+			System.out.println(prefix + "├── .");
+		} else {
+			right.prettyprint(prefix + "├── ", prefix + "|   ");
+		}
+
+		if (left == null) {
+			System.out.println(prefix + "└── .");
+		} else {
+			left.prettyprint(prefix + "└── ", prefix + "    ");
 		}
 	}
 }
