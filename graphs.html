@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Graphs</title>
+</head>
+
+<body>
+  <h1>Graphs</h1>
+
+  <figure style="float: right; width: 35%; border: 1px solid #bbb">
+    <img src="static/img/adventure_map.png" style="width: 100%;">
+
+  </figure>
+
+  <p>Deze week gaan we beginnen met het <b>assessment</b>, de opgaven zullen dus niet in de les afgetekend worden maar laat je in de tentamenweek tijdens het assessment C++ nakijken. Deze opgave maak je als uitbreiding op de eindopdracht van het vak <b>C++</b>, waar jullie een rogue-like gaan maken. Je kunt dus vanaf nu niet meer je eigen programmeertaal kiezen.</p>
+
+  <p>In de rogue-like moeten jullie kamertjes maken die met doorgangen met elkaar verbonden zijn. Als je de kamers beschouwt als vertices en de doorgangen als edges kun je de kaart van het spel als een undirected unweighted graph beschouwen.</p>
+
+  <hr style="clear: both">
+  <div class="assignment">
+    <h2>Breadth-first search</h2>
+    <img src="static/img/talisman.jpg" class="right">
+
+    <p>Voeg het item '<i>magische talisman</i>' toe aan het spel die de held van het spel altijd bij zich heeft. Als de held de talisman raadpleegt vertelt deze hoeveel stappen ver weg de trap omhoog is. Als de held in de kamer met de trap omhoog is is dat 0 stappen, de kamer ernaast 1 stap enzovoorts.</p>
+
+    <p>Bereken het aantal stappen efficient met behulp van het breadth-first search algoritme. Laat het algoritme dus niet meer kamers langslopen dan nodig is!</p>
+
+    <code class="terminal">Actie: talisman
+
+De talisman licht op en fluistert dat de trap omhoog 5 kamers ver weg is</code>
+
+  </div>
+
+  <div class="assignment">
+    <h2>Minimum spanning tree</h2>
+    <img src="static/img/grenade.jpg" class="right">
+
+    <p>Voeg een item '<i>handgraat</i>' toe die de held kan gebruiken om de tegenstander in een kamer in 1 klap te doden. Echter, als hij deze gebruikt heeft dat desastreuze gevolgen voor de kerker. Zorg ervoor dat als de held een handgranaat gebruikt tussen de 10-15 doorgangen op het huidige niveau in de kerker <b>geblokkeerd</b> worden. Deze ingestorte doorgangen geef je op de kaart aan met een <code class="term">~</code> tekentje. De speler kan ingestorte doorgangen niet meer passeren.</p>
+
+    <p>Echter, de kerker is magisch en zal altijd <i>net</i> genoeg structurele integriteit behouden om alle kamers vanuit alle kamers bereikbaar te houden. Maar mogelijk wel met een omweg dus.</p>
+
+    <code class="terminal">Actie: handgranaat
+
+De kerker schudt op zijn grondvesten, alle tegenstanders in de kamer zijn verslagen! Een donderend geluid maakt duidelijk dat gedeeltes van de kerker zijn ingestort...</code>
+
+    <p>Als de kerker zover is verwoest dat elke extra ingestorte doorgang ervoor zou zorgen dat gedeeltes onbereikbaar worden kan de held de handgranaat niet meer gebruiken:</p>
+
+    <code class="terminal">Actie handgranaat
+
+Je vreest dat een extra handgranaat een cruciale passage zal blokkeren. Het is beter om deze niet meer te gebruiken op deze verdieping</code>
+
+    <p>Bepaal welke doorgangen je nog kan opblazen door eerst de <b>minimum spanning tree</b> van de huidige verdieping van de kerker te bepalen. Doe dit door middel van het algoritme van <a href="https://en.wikipedia.org/wiki/Prim%27s_algorithm">Prim</a> of <a href="https://en.wikipedia.org/wiki/Kruskal%27s_algorithm">Kruskal</a>. Je mag zelf kiezen welke van de twee je implementeert in jouw spel. Alle doorgangen die niet in een minimum spanning tree voorkomen zijn veilig om te laten instorten.</p>
+
+    <p>Bouw ook een cheatmode in om de hele kaart in één keer te tonen zodat we tijdens het assessment kunnen controleren of je de juiste doorgangen laat instorten</p>
+
+    <p><b>Bonus:</b> Maak het de speler extra moeilijk door de ingestorte doorgangen zo dicht mogelijk in de buurt van de held te laten voorkomen. Kies de niet-cruciale doorgangen die het dichtst bij de held liggen om te laten instorten.</p>
+  </div>
+
+</body>
+</html>
