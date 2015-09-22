@@ -12,9 +12,31 @@
 
   </figure>
 
-  <p>Deze week gaan we beginnen met het <b>assessment</b>, de opgaven zullen dus niet in de les afgetekend worden maar laat je in de tentamenweek tijdens het assessment C++ nakijken. Deze opgave maak je als uitbreiding op de eindopdracht van het vak <b>C++</b>, waar jullie een rogue-like gaan maken. Je kunt dus vanaf nu niet meer je eigen programmeertaal kiezen.</p>
+  <p>Deze week gaan we beginnen met het <b>assessment</b>, de opgaven zullen dus niet in de les afgetekend worden maar laat je in de tentamenweek tijdens het assessment nakijken.</p>
 
-  <p>In de rogue-like moeten jullie kamertjes maken die met doorgangen met elkaar verbonden zijn. Als je de kamers beschouwt als vertices en de doorgangen als edges kun je de kaart van het spel als een undirected unweighted graph beschouwen.</p>
+  <p>De opdracht is om een rogue-like text-adventure te maken. In dit spel ben je een held die door een kerker loopt met allemaal kamertjes die via de richtingen noord, zuid, oost en west met elkaar verbonden zijn.
+
+  <code class="terminal">N = Normaal
+H = Trap omhoog
+. = Niet bezocht
+~ = Ingestort
+
+. . . . .
+
+. H . . .
+  | ~
+. N-N-N .
+  |   |
+. . . . .
+
+Je bent in een kamer zonder tegenstanders, er is een doorgang in het noorden, oosten en westen. Wat doe je?
+
+Acties: noord, oost, west, talisman, handgranaat
+
+-> noord</code>
+
+
+  <p>In de rogue-like moeten jullie kamertjes maken die met doorgangen met elkaar verbonden zijn. Als je de kamers beschouwt als vertices en de doorgangen als edges kun je de kaart van het spel als een undirected unweighted graph beschouwen. <b>Je mag de opdracht combineren met de eindopdracht die je voor C++ moet maken.</b>. Er zal echter een apart assessment worden ingepland voor ALG2.</p>
 
   <hr style="clear: both">
   <div class="assignment">
@@ -25,7 +47,7 @@
 
     <p>Bereken het aantal stappen efficient met behulp van het breadth-first search algoritme. Laat het algoritme dus niet meer kamers langslopen dan nodig is!</p>
 
-    <code class="terminal">Actie: talisman
+    <code class="terminal">-> talisman
 
 De talisman licht op en fluistert dat de trap omhoog 5 kamers ver weg is</code>
 
@@ -39,15 +61,15 @@ De talisman licht op en fluistert dat de trap omhoog 5 kamers ver weg is</code>
 
     <p>Echter, de kerker is magisch en zal altijd <i>net</i> genoeg structurele integriteit behouden om alle kamers vanuit alle kamers bereikbaar te houden. Maar mogelijk wel met een omweg dus.</p>
 
-    <code class="terminal">Actie: handgranaat
+    <code class="terminal">-> handgranaat
 
 De kerker schudt op zijn grondvesten, alle tegenstanders in de kamer zijn verslagen! Een donderend geluid maakt duidelijk dat gedeeltes van de kerker zijn ingestort...</code>
 
     <p>Als de kerker zover is verwoest dat elke extra ingestorte doorgang ervoor zou zorgen dat gedeeltes onbereikbaar worden kan de held de handgranaat niet meer gebruiken:</p>
 
-    <code class="terminal">Actie handgranaat
+    <code class="terminal">-> handgranaat
 
-Je vreest dat een extra handgranaat een cruciale passage zal blokkeren. Het is beter om deze niet meer te gebruiken op deze verdieping</code>
+Je vreest dat een extra handgranaat een cruciale passage zal blokkeren. Het is beter om deze niet meer te gebruiken op deze verdieping.</code>
 
     <p>Bepaal welke doorgangen je nog kan opblazen door eerst de <b>minimum spanning tree</b> van de huidige verdieping van de kerker te bepalen. Doe dit door middel van het algoritme van <a href="https://en.wikipedia.org/wiki/Prim%27s_algorithm">Prim</a> of <a href="https://en.wikipedia.org/wiki/Kruskal%27s_algorithm">Kruskal</a>. Je mag zelf kiezen welke van de twee je implementeert in jouw spel. Alle doorgangen die niet in een minimum spanning tree voorkomen zijn veilig om te laten instorten.</p>
 
