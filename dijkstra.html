@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dijkstra's Algorithm</title>
+</head>
+
+<body>
+  <h1>Dijkstra's Algorithm</h1>
+
+  <figure style="float: right; width: 35%; border: 1px solid #bbb">
+    <img src="static/img/shortestpath.jpg" style="width: 100%;">
+
+  </figure>
+
+  <p>Deze week gaan we kijken naar het laatste onderwerp van dit vak: het kortste pad berekenen met behulp van Dijkstra's algoritme. Dit is niet het enige algoritme om het kortste pad mee te berekenen. Maar wel één van de meest bekende en meest gebruikte.</p>
+
+  <p>We gaan het spel waar je vorige week mee begonnen bent verder uitbreiden met tegenstanders die een bepaald level zijn. Deze bevinden zich in de kamertjes en de held moet er tegen vechten als deze in een kamertje komt waar een tegenstander zich bevindt.</p>
+
+  <p>Onze held wil graag zo snel mogelijk naar de uitgang komen. Daarbij wil hij zo min mogelijk kamertjes langs. Maar nog liever wil hij zo min mogelijk lastige tegenstanders bevechten. Als onze held de keuze heeft uit twee tegenstanders met 10 hp of één tegenstander met 30 hp, dan zal hij liever voor het eerste kiezen. En als er een route is zonder tegenstanders kiest hij natuurlijk daar voor.</p>
+
+  <p>Naast tegenstanders zijn er ook vallen die onze held wil vermijden. Je mag zelf kiezen hoe zwaar dit meeweegt ten opzichte van het vijandjes vermijden.</p>
+
+  <hr style="clear: both">
+  <div class="assignment">
+    <h2>Shortest path algorithm</h2>
+    <img src="static/img/compass.jpg" class="right">
+
+    <p>Voeg het item '<i>zilveren kompas</i>' toe aan het spel die de held van het spel altijd bij zich heeft. Als de held dit kompas gebruikt vertelt het de route die hij moet volgen om zo veilig mogelijk naar de uitgang te komen. Daarbij worden vijandjes en vallen vermeden zoals hierboven beschreven.</p>
+
+    <code class="terminal">-> kompas
+
+Je haalt het kompas uit je zak. Het trilt in je hand en projecteert in grote lichtgevende letters in de lucht:
+
+Noord - Noord - Oost - Oost - Noord - West
+2 tegenstanders (10 hp, 5 hp)
+1 val
+</code>
+
+    <p>Gebruik het kortste pad algoritme van Dijkstra om de route te berekenen. Bedenk van tevoren goed hoe je de edge-weights gaat berekenen en op welke edges ze van toepassing zijn.</p>
+
+    <p>Implementeer ook een cheat-commando om de hele kaart met alle tegenstanders en hun hp scores te kunnen laten zien. En een commando die op het kortste pad extra moeilijke tegenstander(s) plaatst. Zodat je tijdens het assessment kan demonstreren dat het algoritme werkt en er een route omheen wordt gekozen.</p>
+  </div>
+
+  <h3>Beoordeling assessment</h3>
+
+  <p>Bij het assessment gaan we het spel spelen en je vragen stellen over de werking van de algoritmes aan de hand van de code. Als we er fouten in vinden of jullie kunnen de code niet uitleggen dan krijg je daar op dat onderdeel punten aftrek voor.</p>
+
+  <p>We hanteren de volgende normering:</p>
+
+  <table class="table table-bordered">
+    <tr>
+      <th>Max Punten</th>
+      <th></th>
+    </tr>
+
+    <tr>
+      <td>2</td>
+      <td>Implementatie Breadth First Search</td>
+    </tr>
+
+    <tr>
+      <td>3</td>
+      <td>Implementatie Minimum Spanning Tree</td>
+    </tr>
+
+    <tr>
+      <td>3</td>
+      <td>Implementatie Dijkstra's Algorithm</td>
+    </tr>
+
+    <tr>
+      <td>1</td>
+      <td>Bonus: Minimum Spanning Tree</td>
+    </tr>
+
+    <tr>
+      <td>1</td>
+      <td>Bonus: <i>Iets extra's</i></td>
+    </tr>
+  </table>
+
+  <p>Voor het laatste 'iets extras' punt voor de absolute 10 moet je zelf nog iets bedenken dat te maken heeft met graph algorithms. Bijvoorbeeld om je kerker zo op te bouwen dat je nooit twee vallen of twee tegenstanders in aangrenzende kamers hebt (graph coloring). Of je kerker met behulp van een maze-generation algoritme op te bouwen.</p>
+
+  <p>Let op dat je dit laatste bonus punt alleen verdiend als je zowel de Breadth First Search, Minimum Spanning Tree en Dijkstra's Algorithm opdrachten hebt gemaakt.</p>
+
+</body>
+</html>
