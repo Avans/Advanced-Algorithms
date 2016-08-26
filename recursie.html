@@ -7,9 +7,22 @@
 <body>
   <h1>Recursie</h2>
 
-  <p>Welkom bij het vak Algoritmiek 2! Deze eerste week gaan we kijken naar een belangrijke techniek die we voor alle komende weken weer gaan gebruiken. <a href="https://en.wikipedia.org/wiki/Recursion">Recursie</a>! In alle volgende weken gaan we met recursie te maken hebben, zorg er dus voor dat je goed doorhebt hoe het werkt.</p>
+  <figure style="float: right; width: 17%; margin-left: 20px">
+    <img src="static/img/testexplorer.png" style="width: 100%;">
+  </figure>
 
-  <p> In dit dictaat vind je alle opdrachten voor dit vak. Je mag zelf een programmeertaal kiezen om de opdrachten te maken als er geen taal genomend is. Zet alle <em>code</em> en <em>antwoorden</em> van deze week in 1 bestand (je mag zelf kiezen of dit een broncode bestand is of een Word bestand). Je mag in tweetallen werken.</p>
+  <p>Welkom bij het vak Algoritmiek 2! Deze eerste week gaan we kijken naar een belangrijke techniek die we voor alle komende weken weer gaan gebruiken. <a href="https://en.wikipedia.org/wiki/Recursion">Recursie</a>! In alle volgende weken gaan we met recursie te maken hebben, zorg er dus voor dat je goed doorhebt hoe het werkt. (wil je meer informatie over recursie? klik dan <a href=".#/recursie.html" target="_blank">hier</a>)</p>
+
+  <p>De <b>opdrachten</b> voor dit vak lever je in via GitHub. We zetten elke week een template project voor je klaar, en jouw taak dit blok is om dit project aan te vullen zodat alle unit tests werken. Werken ze allemaal? Dan heb je een 10 voor dit vak, failen ze allemaal? Dan heb je een 0. Zo simpel is het! Sommige opdrachten zijn met opzet wat lastiger, als je daar niet uitkomt kan je ze overslaan en nog steeds veilig voor de 7 gaan.</p>
+
+  <p>Om te voorkomen dat je code schrijft die alleen maar werkt op de unit tests die we gegeven hebben houden we ook een paar unit tests achter de hand. Maar als je je goed aan de opdracht houdt hoef je niet bang te zijn dat die zullen failen.</p>
+
+  <p>Doe geen rare dingen met het project zoals references/packages/libraries toevoegen, broncode bestanden verplaatsen of extra parameters toevoegen op methodes die we hebben gegeven. We kijken de code automatisch na, en als je dingen aan het project of de solution gaat wijzigen is er een grote kans dat dat fout gaat.</p>
+
+  <p>Ga nu naar onderstaande link toe en maak een versie kopie voor het project van week 1, clone het project lokaal en start met de eerste vraag!</p>
+
+  <a href="https://classroom.github.com/assignment-invitations/155d8d046da8246fd12c465e2603a3c8" class="github_link">GitHub: Week 1. Recursie</a>
+
 
   <div class="assignment">
     <h2>Pyramide probleem</h2>
@@ -19,16 +32,15 @@
 
     <blockquote>0, 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, ...</blockquote>
 
-    <p>Dit zijn de zogenaamde <a href="https://nl.wikipedia.org/wiki/Driehoeksgetal">driehoeksgetallen</a>. Bij 0 tel je 1 op om 1 te krijgen. Daar tel je 2 bij op om 3 te krijgen, dan tel je er 3 bij op, dan 4. etc etc. Je kan dit ook zien als het aantal balletjes in een pyramide.</p>
+    <p>Dit zijn de zogenaamde <a href="https://nl.wikipedia.org/wiki/Driehoeksgetal">driehoeksgetallen</a>. Bij 0 tel je 1 op om 1 te krijgen. Daar tel je 2 bij op om 3 te krijgen, dan tel je er 3 bij op, dan 4. etc etc. Je kan dit ook zien als het aantal balletjes in een 2d pyramide.</p>
 
     <p>Wat formeler: De functie <img src="http://latex.codecogs.com/svg.latex?$driehoeksgetal$(n)"> is gedefinieerd als <img src="http://latex.codecogs.com/svg.latex?n + (n-1) + (n-2) + ... + 3 + 2 + 1 + 0">. Bijvoorbeeld: <img src="http://latex.codecogs.com/svg.latex?$driehoeksgetal$(6) = 6 + 5 + 4 + 3 + 2 + 1 + 0 = 21">. Je kan de functie ook recursief definiëren als: <img src="http://latex.codecogs.com/svg.latex?$driehoeksgetal$(n) = n + $driehoeksgetal$(n - 1), $driehoeksgetal$(0) = 0"></p>
 
     <ol>
-      <li>Schrijf de driehoeksgetalfunctie op een iteratieve manier (dus met een loopje)</li>
-      <li>Schrijf de functie op een recursieve manier.
-      Gebruik geen extra parameters of instance variables: <code>public int driehoek(int n)</code>. De functie mag alleen gebruik maken van zichzelf.</li>
-      <li>Schrijf de functie zonder loopjes en recursie. Op de wikipagina staat een formule waarmee je driehoeksgetallen kan berekenen.</li>
-      <li>Test alledrie de functies met grote waardes voor <code>n</code>. Welke manier is het snelst? Welke het langzaamst?</li>
+      <li><b>10pt.</b> Schrijf de functie <code>triangular_number_iterative</code> zodat deze werkt op bovenstaande manier. Doe dit op een <b>iteratieve</b> manier (dus met loopjes, niet met jezelf aanroepen)</li>
+      <li><b>10pt.</b> Schrijf de functie <code>triangular_number_recursive</code> op een <b>recursieve</b> manier. De functie mag alleen gebruik maken van zichzelf en niet met loopjes werken.</li>
+      <li><b>5pt.</b> Schrijf de functie <code>triangular_number_function</code> zonder loopjes en recursie. Op de wikipagina staat een formule waarmee je driehoeksgetallen kan berekenen.</li>
+      <li><b>0pt.</b> Test alledrie de functies met grote waardes voor <code>n</code>. Welke manier is het snelst? Welke het langzaamst?</li>
     </ol>
   </div>
 
@@ -43,10 +55,10 @@
     <blockquote>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...</blockquote>
 
     <ol>
-      <li>Leg kort uit hoe je de functie op een recursieve manier kan definiëren (gebruik de versie waarbij <img src="http://latex.codecogs.com/svg.latex?$fibonacci$(0) = 0"> en <img src="http://latex.codecogs.com/svg.latex?$fibonacci$(1) = 1">)</li>
-      <li>Schrijf de functie in code op zowel een iteratieve als een recursieve manier. 
-      Gebruik geen extra parameters of instance variables: <code>public int fibonacci(int n)</code>. De functie mag alleen gebruik maken van zichzelf.</li>
-      <li>Test weer beide functies met grote waardes. Welke manier is sneller? Waarom is dat zo?</li>
+      <li><b>0pt.</b> Leg kort uit hoe je de functie op een recursieve manier kan definiëren (gebruik de versie waarbij <img src="http://latex.codecogs.com/svg.latex?$fibonacci$(0) = 0"> en <img src="http://latex.codecogs.com/svg.latex?$fibonacci$(1) = 1">)</li>
+      <li><b>10pt.</b> Schrijf de functie <code>fibonacci_recursive</code> op een recursieve manier</li>
+      <li><b>10pt.</b> Schrijf de functie <code>fibonacci_iterative</code> op een iteratieve manier</li>
+      <li><b>5pt.</b> Test weer beide functies met grote waardes. Welke manier is sneller? Geef je antwoord door in <code>which_is_faster</code> de juiste enum waarde terug te geven.</li>
     </ol>
   </div>
 
@@ -57,12 +69,12 @@
 
     <p>Niet alle recursieve functies zijn saaie rijtjes met getallen. We kunnen ze ook gebruiken om bijvoorbeeld een String om te draaien. Dit kan je doen door de laatste letter geconcateneerd met de recursieve aanroep met de string zonder de laatste letter terug te geven.</p>
 
-    <p>Bijvoorbeeld: Als je wordt aangeroepen met <code>omgedraaid("Paul")</code> return je "l" met wat <code>omgedraaid("Pau")</code> teruggeeft er achter geplakt.</p>
+    <p>Bijvoorbeeld: Als je wordt aangeroepen met <code>string_reverse("Paul")</code> return je "l" met wat <code>string_reverse("Pau")</code> teruggeeft er achter geplakt.</p>
 
     <ol>
-      <li>Schrijf een recursieve functie <code>public String omgedraaid(String s);</code> die een String als invoer heeft en de omgekeerde string teruggeeft. </li>
-      <li>Wat is de base case van deze functie? (dus het kleinste probleem geval waarbij je niet jezelf meer hoeft aan te roepen)</li>
-      <li>Schrijf een recursieve functie <code>public boolean isPalindroom(String s);</code> die teruggeeft of een woord een <a href="https://nl.wikipedia.org/wiki/Palindroom">palindroom</a> is of niet. Die functie mag weer alleen gebruik maken van zichzelf.</li>
+      <li><b>10pt.</b> Schrijf de recursieve functie <code>string_reverse</code> die een String als invoer heeft en de omgekeerde string teruggeeft.</li>
+      <li><b>0pt.</b> Wat is de base case van deze functie? (dus het kleinste probleem geval waarbij je niet jezelf meer hoeft aan te roepen)</li>
+      <li><b>10pt.</b>Schrijf de recursieve functie <code>is_palindrome</code> die teruggeeft of een woord een <a href="https://nl.wikipedia.org/wiki/Palindroom">palindroom</a> is of niet. Die functie mag weer alleen gebruik maken van zichzelf en geen loopjes bevatten.</li>
     </ol>
   </div>
 
@@ -70,12 +82,46 @@
     <h2>Tapijt van Sierpiński</h2>
     <img src="static/img/sierpinski_carpet.gif" class="right">
 
-    <p>Het <a href="https://nl.wikipedia.org/wiki/Tapijt_van_Sierpi%C5%84ski">Tapijt van Sierpiński</a> is een <a href="https://nl.wikipedia.org/wiki/Fractal">fractal</a> die je kan maken door acht vierkanten te tekenen rondom een middelste vierkant dat je niet tekent. Dit herhaal je ad infinitum voor elk van deze subvierkanten. (Er is ook een versie waarbij je juist alleen maar het middelste vierkant tekent. Maar die gaan we niet maken, daar staan al teveel voorbeelden van op internet ;) ).
+    <p>Het <a href="https://nl.wikipedia.org/wiki/Tapijt_van_Sierpi%C5%84ski">Tapijt van Sierpiński</a> is een <a href="https://nl.wikipedia.org/wiki/Fractal">fractal</a> die je kan maken door acht vierkanten te tekenen rondom een middelste vierkant dat je niet tekent. Dit herhaal je ad infinitum voor elk van deze subvierkanten. (Er is ook een versie waarbij je juist alleen maar het middelste vierkant tekent. Maar die gaan we niet maken, daar staan al teveel voorbeelden van op internet ;) ).</p>
+
+    <p>We hebben al een WPF project voor je klaargezet, het enige wat je hoeft te doen om de <code>sierpinski_carpet</code> functie te schrijven. Deze functie wordt aangeroepen met de volgende parameters:</p>
+
+    <ul>
+      <li><b>levels</b>: Dit is hoeveel levels diep het tapijt getekend dient te worden. Een niveau van 0 is een vierkant dat de gehele bounds opvult</li>
+      <li><b>x, y, width, height</b>: Dit zijn de bounds, het tapijt moet binnen dit gebied getekend worden</li>
+      <li><b>canvas</b>: Dit is een object waar je drawSquare() op kunt aanroepen, dat wordt dan getekend in de GUI.</li>
+    </ul>
 
     <ol>
-      <li>Maak een klein programmaatje dat het Sierpinski tapijt kan weergeven. De gebruiker moet kunnen aangeven hoeveel "niveau's" van het tapijt worden getekend.</li>
-      <li>Hoeveel niveau's kan jouw computer aan? Hoeveel vierkantjes moet het dan tekenen?</li>
+      <li><b>15pt.</b> Schrijf de functie <code>sierpinski_carpet</code> op een recursieve manier.</li>
+      <li><b>0pt.</b> Hoeveel niveau's kan jouw computer aan? Hoeveel vierkantjes moet het dan tekenen?</li>
     </ol>
+  </div>
+
+  <div class="assignment">
+    <h2>Het vermoeden van Collatz</h2>
+    <img src="static/img/collatz_conjecture.png" class="right">
+
+    <p>Het vermoeden van Collatz is dat je voor elk positief getal bij 1 uitkomt als je de volgende procedure toepast:</p>
+
+    <ul>
+      <li>Deel het getal door 2 als het even is</li>
+      <li>Vermenigvuldig het getal met 3 en tel er 1 bij op als het oneven is.</li>
+      <li>Herhaal tot je bij 1 uitkomt</li>
+    </ul>
+
+    <p>Of je voor elk getal ook echt altijd bij 1 uitkomt is nog een open probleem in de wiskunde, maar daar mag je voor de opdracht wel vanuit gaan. De opdracht is om een functie te schrijven die aangeeft hoeveel stappen er nodig zijn om voor een gegeven getal bij 1 uit te komen.</p>
+
+    <p>Voorbeeld: collatz(3) = 7<br>
+      Omdat je voor 3 de volgende 7 stappen moet uitvoeren om bij 1 te komen:<br>
+      <img src="static/img/collatz_3.png" style="width: 50%">
+    </p>
+
+    <p>Als de invoer al 1 is moet je 0 teruggeven: collatz(1) = 0 Voor invoer van 0 of lager moet de functie -1 teruggeven.</p>
+
+    <ol>
+      <li><b>10 pt.</b> Implementeer de functie op een recursieve manier in de <code>collatz_recursive()</code> methode</li>
+      <li><b>10 pt.</b> Implementeer de functie op een iteratieve manier in de <code>collatz_iterative()</code> methode</li>
   </div>
 
 </body>
