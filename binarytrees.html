@@ -7,7 +7,9 @@
 <body>
   <h1>Binary Trees</h2>
 
-  <p>Tijd voor het 'datastructuren' gedeelte van het vak Algoritmiek en Datastructuren 2. We hebben voor nu even genoeg andermans code getimed en getest. We gaan weer lekker aan de slag met onze eigen algoritmes bedenken en programmeren!</p>
+  <p>Tijd voor het 'datastructuren' gedeelte van het vak Advanced Algorithms &amp; Datastructures. We hebben voor nu even genoeg gesorteerd. We gaan weer lekker aan de slag met onze eigen algoritmes bedenken en programmeren!</p>
+
+  <a href="https://classroom.github.com/assignment-invitations/02633a28f5092701601d41b7a7dd5f1e" class="github_link">GitHub: Week 3 - Trees</a>
 
   <div class="assignment">
     <h2>Binary Search Trees</h2>
@@ -15,32 +17,39 @@
 
     <p>In de presentatie hebben we het gehad over wat een Binary Search Tree is, nu gaan jullie er zelf één maken. Eentje die niet alleen maar kan inserten en deleten maar ook nog een hoop extra trucjes kan.</p>
 
-    <p>Neem deze broncode over in je eigen project: <a href="https://github.com/Avans/Algoritmiek-2/tree/gh-pages/src/BST.java">BST.java</a> <a href="https://github.com/Avans/Algoritmiek-2/tree/gh-pages/src/BSTNode.java">BSTNode.java</a> (je mag de code ook porten naar een andere programmeertaal als je dat fijn vindt). Deze code bevat de absolute basis voor een Binary Search Tree waar je getallen in kunt opslaan. De <code>insert()</code> methode hebben we jullie cadeau gegeven. Aan jullie de taak om de rest van de methodes te implementeren:</p>
+    <p><em>Belangrijke hint:</em> Probeer niet alle code in <code>BinaryTree.cs</code> te schrijven. Maak methodes aan in de klasse <code>Node</code> en delegeer daar naar toe. Dan wordt het ook makkelijker om recursie toe te passen.</p>
 
-    <p><code>public boolean exists(int number)</code><br>
-    Geeft terug of het getal in de boom bestaat. Implementeer dit op een efficiënte manier, dus ga bijvoorbeeld niet alle nodes in de boom één voor één af.</p>
+    <ul>
+      <li><b>20pt.</b> <code>public void insert(int number)</code><br>
+      <p>De insert methode voegt een waarde toe aan de boom. Uiteraard niet zomaar, het moet wel een geldige binary search tree blijven. Bij gelijke waardes mag je zelf bepalen of je de waarde links of rechts toevoegd.</p></li>
 
-    <p><code>public int min()</code><br>
-    Geeft het kleinste getal wat aan de boom is toegevoegd terug.</p>
+      <li><b>25pt.</b> <code>public void delete(int number)</code><br>
+      <p>Verwijder een getal uit de boom, zorg ervoor dat je boom een geldige binary search tree blijft.
+      Er is een mooie recursieve versie van de delete(). Die geeft de Node terug die op dezelfde plek in de tree komt te staan als de waarde verwijderd zou zijn.</p>
+      </li>
 
-    <p><code>public int max()</code><br>
-    Geeft het grootste getal wat aan de boom is toegevoegd terug.</p>
+      <li><b>10pt.</b> <code>public boolean exists(int number)</code><br>
+      <p>Geeft terug of het getal in de boom bestaat. Implementeer dit op een efficiënte manier, dus ga bijvoorbeeld niet alle nodes in de boom één voor één af.</p></li>
 
-    <p><code>public int depth()</code><br>
-    Geeft aan hoeveel niveaus diep de boom is op zijn diepste punt. De boom in het plaatje rechts is bijvoorbeeld 4 niveaus diep.</p>
+      <li><b>10pt.</b> <code>public int min()</code><br>
+      <p>Geeft het kleinste getal wat aan de boom is toegevoegd terug.</p></li>
 
-    <p><code>public int count()</code><br>
-    Geeft het aantal nodes in de boom terug.</p>
+      <li><b>10pt.</b> <code>public int max()</code><br>
+      <p>Geeft het grootste getal wat aan de boom is toegevoegd terug.</p></li>
 
-    <p><code>public void print()</code><br>
-    Print alle getallen in de boom op volgorde van klein naar groot.</p>
+      <li><b>10pt.</b> <code>public int depth()</code><br>
+      <p>Geeft aan hoeveel niveaus diep de boom is op zijn diepste punt. De boom in het plaatje rechts is bijvoorbeeld 4 niveaus diep.</p></li>
 
-    <p><code>public int printInRange(int min, int max)</code><br>
-    Zelfde als vorige, maar nu alleen de waardes die groter of gelijk aan <code>min</code> zijn, en kleiner of gelijk aan <code>max</code>. Implementeer dit weer op een efficiënte manier, ga niet simpelweg langs alle nodes.</p>
+      <li><b>10pt.</b> <code>public int count()</code><br>
+      <p>Geeft het aantal nodes in de boom terug.</p></li>
 
-    <p><code>public Node delete(int number)</code><br>
-    Verwijder een getal uit de boom, zorg ervoor dat je boom een geldige binary search tree blijft.
-    Er is een mooie recursieve versie van de delete(). Die geeft de Node terug die op dezelfde plek in de tree komt te staan als de waarde verwijderd zou zijn.</p>
+      <li><b>10pt.</b> <code>public void print()</code><br>
+      <p>Print alle getallen in de boom op volgorde van klein naar groot.</p></li>
+
+      <li><b>10pt.</b> <code>public int printInRange(int min, int max)</code><br>
+      <p>Zelfde als vorige, maar nu alleen de waardes die groter of gelijk aan <code>min</code> zijn, en kleiner of gelijk aan <code>max</code>. Implementeer dit weer op een efficiënte manier, ga niet simpelweg langs alle nodes.</p></li>
+    </ul>
+
 
     <p>Let op dat voor alle methodes er zowel een recursieve als een iteratieve oplossing is. We vragen jullie om de <i>recursieve</i> oplossing!</p>
 <br>
@@ -52,18 +61,9 @@
 
     <p>De tree datastructuur wordt ook gebruikt door compilers om een representatie op te bouwen van de structuur van broncode, de zogenaamde <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">abstract syntax tree</a>. Hier rechts zie je een voorbeeld van een tree die is geparsed uit de string "(4+5)*7". Geen zorgen, je hoeft geen parser te schrijven (in dit vak tenminste).</p>
 
-    <p>Neem eerst de volgende broncode over:
-      <a href="https://github.com/Avans/Algoritmiek-2/tree/gh-pages/src/AbstractSyntaxTree.java">AbstractSyntaxTree.java</a>
-      <a href="https://github.com/Avans/Algoritmiek-2/tree/gh-pages/src/Expression.java">Expression.java</a>
-      <a href="https://github.com/Avans/Algoritmiek-2/tree/gh-pages/src/Number.java">Number.java</a>
-      <a href="https://github.com/Avans/Algoritmiek-2/tree/gh-pages/src/Operand.java">Operand.java</a>
-      (je mag de code ook porten naar een andere taal als je dat wil).
-    </p>
+    <p>In de map <code>AST</code> zie je al een beginnetje voor de klasses van een AST. De opdracht is om deze code uit te breiden zodat je aan elke node (in deze code de klasse Expression) kan vragen om zichzelf te printen met de methode <code>ToString()</code> en om zichzelf uit te rekenen met de methode <code>evaluate</code>. Hier moet je net als in de vorige opdracht gebruik maken van recursie</p>
 
-    <p>In de main zie je dat er handmatig nodes worden aangemaakt en aan elkaar worden meegegeven om de boom op te bouwen van het plaatje hier rechts. De opdracht is om deze code uit te breiden zodat je aan elke node (in deze code de klasse Expression) kan vragen om zichzelf te printen met de methode <code>toString()</code> en om zichzelf uit te rekenen met de methode <code>evaluate</code>. Hier moet je net als in de vorige opdracht gebruik maken van recursie</p>
-
-    <p>In de main staan twee print statements, als je de code goed het uitgebreid met methodes, instance variabelen en implementaties printen die respectievelijk <code>((4+5)*7)</code> en <code>63</code>.</p>
-
+    <p>De AST in het plaatje rechts is ook uitgewerkt in een meegeleverde unit test</p>
   </div>
 </body>
 </html>
