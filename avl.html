@@ -6,12 +6,15 @@
 
 <body>
   <h1>Self-balancing binary search tree</h1>
+
+  <a href="https://classroom.github.com/assignment-invitations/a04b4fa91f913c630c71e4598a281548" class="github_link">Github: Week 4. AVL</a>
+
+  <p>Binary trees kan je snel in zoeken en toevoegen, <em>mits</em> ze gebalanceerd zijn. Als elke node een rechterkind van de vorige node is 'hangt' de boom erg naar rechts toe en moet je nog steeds potentieel alle nodes doorlopen om toe te voegen en te zoeken. <a href="https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree">Self-balancing binary search trees</a> proberen dit probleem op te lossen door na elke toevoeging de boom te 'fixen' zodat deze niet ongebalanceerd raakt.</p>
+
   <figure style="float: right; width: 20%">
     <img src="static/img/unbalanced.png" style="width: 100%;">
     <figcaption style="color: #888; font-size: small; font-style: italic; text-align: center;">Een ongebalanceerde boom</figcaption>
   </figure>
-
-  <p>Binary trees kan je snel in zoeken en toevoegen, <em>mits</em> ze gebalanceerd zijn. Als elke node een rechterkind van de vorige node is 'hangt' de boom erg naar rechts toe en moet je nog steeds potentieel alle nodes doorlopen om toe te voegen en te zoeken. <a href="https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree">Self-balancing binary search trees</a> proberen dit probleem op te lossen door na elke toevoeging de boom te 'fixen' zodat deze niet ongebalanceerd raakt.</p>
 
   <p>Dit fixen gebeurd met zogenaamde <a href="https://en.wikipedia.org/wiki/Tree_rotation">boom rotaties</a>. Een techniek waarbij je nodes verplaatst in de boom, zonder de volgorde van de nodes te verwisselen. <a href="https://en.wikipedia.org/wiki/Tree_rotation#/media/File:Tree_rotation_animation_250x250.gif">Dit plaatje</a> laat mooi zien wat er gebeurd als je nodes linksom of rechtsom roteert.</p>
 
@@ -20,27 +23,25 @@
   <p>Een self-balancing binary search tree probeert na elke insert en delete de boom weer terug in balans te brengen door rotaties uit te voeren. Deze week gaan we kijken naar één van de eerste technieken die hier voor zijn uitgevonden: de <a href="https://en.wikipedia.org/wiki/AVL_tree">AVL tree.</a></p>
 
   <h4>Pretty printing</h4>
-  <p>Om je te helpen hebben we een methode gemaakt die de structuur van de boom in de console print. De implementatie kan je hier vinden: <a href="https://github.com/Avans/Algoritmiek-2/blob/gh-pages/src/BST.java">BST.java</a>, <a href="https://github.com/Avans/Algoritmiek-2/blob/gh-pages/src/BSTNode.java">BSTNode.java</a>. De eerste node die die print is de rechternode, de tweede de linkernode.</p>
-
-  <p>Als je de speciale karakters in Eclipse niet aan de praat krijgt ligt het misschien aan de text-encoding in Eclipse. Dit kan je oplossen door: Eclipse > Preferences > General > Workspace > Text file encoding to UTF-8.</p>
+  <p>Om je te helpen hebben we vast de methode <code>prettyprint()</code> gemaakt die de structuur van de boom in de console print. De eerste node die die print is de rechternode, de tweede de linkernode. Dat lijkt verkeerd om, maar als je je hoofd een beetje linksom draait dan staat alles zoals in de plaatjes!</p>
 
   <div class="assignment">
-    <h2>Boom rotaties</h2>
+    <h2>Boom rotaties </h2>
 
     <p>Voordat we gaan beginnen met balanceren hebben we eerst nog twee methodes nodig waarmee we rotaties kunnen uitvoeren, rotateLeft() en rotateRight(). Deze methodes kan je uitvoeren op elke node in de boom (mits het bijbehorende pivot element bestaat). Deze gaan we later gebruiken om de boom gebalanceerd te krijgen. Let op dat deze functies eigenlijk heel kort en simpel zijn, je hoeft geen loops of recursie te gebruiken, alleen wat referenties anders te zetten.</p>
 
     <hr style="clear: both;">
     <img src="static/img/rotateLeft.png" class="right">
-    <code>public BSTNode rotateLeft()</code>
+    <b>5pt.</b> <code>public Node rotateLeft()</code>
     <p>Deze functie maakt de huidige node een linkerkind van de pivot (het rechterkind). Let goed op de afbeelding welke referenties er allemaal veranderen. Wat je teruggeeft is de nieuwe root van de subtree (de pivot dus).</p>
 
     <hr style="clear: both;">
     <img src="static/img/rotateRight.png" class="right" >
-    <code>public BSTNode rotateRight()</code>
+    <b>5pt.</b> <code>public Node rotateRight()</code>
     <p>Deze functie maakt de huidige node een rechterkind van de pivot (het linkerkind). Let wederom goed op de afbeelding welke referenties er allemaal veranderen. Deze functie geeft ook weer de nieuwe root van de subtree terug (de pivot).</p>
 
     <hr style="clear: both">
-    <p>Als er geen pivot is omdat het linker- of rechterkind null is doen de rotatie functies niets. Test je methode goed uit met verschillende soorten bomen, het is belangrijk dat ze goed zijn om niet vast te lopen op de laatste opgave.</p>
+    <p>Als er geen pivot is omdat het linker- of rechterkind null is doen de rotatie functies niets.</p>
   </div>
 
   <div class="assignment">
@@ -58,11 +59,11 @@
     <img src="static/img/avl_balance.png" style="width: 40%">
     <p>Bovenstaande boom is bijvoorbeeld een AVL boom die in balans is, ondanks dat hij een beetje naar links lijkt te hangen. Voor de node 8 is het diepste pad aan de linkerkant 4 lang (5-3-2-1), en aan de rechterkant 3 lang (11-10-9). Het verschil tussen 3 en 4 is 1, dus node 8 is in balans. Hetzelfde moeten we checken voor node 5, node 11 en alle andere nodes om te controleren of het een geldige AVL boom is</p>
 
-    <p><b>Kunnen we een <i>leaf</i> weghalen in bovenstaande boom en het AVL gebalanceerd houden? Zo ja, welke node kan er weg?</b></p>
+    <p>Zouden we een <i>leaf</i> kunnen weghalen in bovenstaande boom en het AVL gebalanceerd houden? Zo ja, welke node kan er weg?</p>
 
     <hr>
 
-    <code>public boolean isAVLGebalanceerd()</code>
+    <b>15pt.</b> <code>public bool isBalanced()</code>
 
     <p>Maak een methode in de klasse BSTNode die controleert of een subtree AVL gebalanceerd is. Je mag hiervoor gebruik maken van de methode <code>depth()</code> die je eerder hebt geschreven. Let goed op de definitie die we hierboven hebben opgesomt, je moet recursie gebruiken om de methode correct te implementeren.</p>
   </div>
@@ -71,15 +72,17 @@
     <h2>AVL Tree</h2>
     <img src="static/img/avl.png" class="right">
 
-    <p>Tijd om met het echte werk te beginnen, het maken van een boom die zichzelf balanceert. Dit is één van de lastigste opgave van het vak, vraag dus gerust om hulp bij je medestudenten of de practicumdocent als je ergens op vastloopt. Op internet kan je ook veel informatie vinden over een AVL boom.</p>
+    <p>Tijd om met het echte werk te beginnen, het maken van een boom die zichzelf balanceert. Let wel op: dit is één van de lastigste opgave van dit vak. Bijt je er niet op stuk, want je hoeft niet <em>alle</em> opdrachten te maken om dit vak te halen (tenzij je voor de absolute 10 wil gaan natuurlijk).</p>
 
-    <code>public BSTNode insertAVL(int number)</code>
+    <b>70pt.</b> <code>public void insert(int number)</code>
 
-    <p>Maak een methode insertAVL() in de klasse BSTNode, deze methode gaat net als insert() die we al hadden gegeven op zoek naar een plekje in de binary search tree om het getal neer te zetten. Als je vastloopt, maak dan eerst de methode zonder verdere balanceercode die de node toevoegt alsof het een gewone binary search tree is.</p>
+    <p>We gaan de methode insert() maken, maar net als vorige week is het handig bij recursieve aanroepen om een methode te hebben in de Node zelf. Onze tip van de dag is: maak een methode <code>public Node insert(int number)</code> in de klasse <code>Node</code></p>
 
-    <p>Als insertAVL() een node heeft toegevoegd hebben we grote kans dat de boom niet meer AVL gebalanceerd is. Voordat de aanroep eindigt moeten we dit eerst fixen door rotaties uit te voeren. Als we rotaties uitvoeren verandert de root van de subtree waarin we bezig zijn. Het is zaak om dit door te geven aan de parent van de subtree zodat deze zijn referenties kan updaten. Dat is de reden dat de insertAVL() methode een BSTNode node teruggeeft, de aanroepende code krijgt dan de referentie naar de root van de gebalanceerde versie van de subtree.</p>
+    <p>Dze methode gaat net als de insert van vorige week op zoek naar een plekje in de binary search tree om het getal neer te zetten. Als je vastloopt, maak dan eerst de methode zonder verdere balanceercode die de node toevoegt alsof het een gewone binary search tree is.</p>
 
-    <p>Ok, je code heeft net recursief insertAVL() aangeroepen en de left en right pointers geupdate met mogelijke nieuwe roots van de subtrees, nu moeten we nog ervoor zorgen dat alles in balans raakt. Er is maar 1 node toegevoegd, dus het hoogteverschil tussen links en rechts kan nooit meer dan 2 zijn (1 was al toegestaan, plus de node die is toegevoegd.). Dit hoogteverschil kunnen we terugbrengen naar 1 en er weer een geldige AVL subtree van maken. Maar dan moeten we wel eerst kijken met welk van onderstaande vier gevallen we te maken hebben:</p>
+    <p>Als insert() een node heeft toegevoegd hebben we grote kans dat de boom niet meer AVL gebalanceerd is. Voordat de aanroep eindigt moeten we dit eerst fixen door rotaties uit te voeren. Als we rotaties uitvoeren verandert de root van de subtree waarin we bezig zijn. Het is zaak om dit door te geven aan de parent van de subtree zodat deze zijn referenties kan updaten. Dat is de reden dat de insert() methode van Node een Node node teruggeeft als return-waarde, de aanroepende code krijgt dan de referentie naar de root van de gebalanceerde versie van de subtree.</p>
+
+    <p>Ok, je code heeft net recursief insert() aangeroepen en de left en right pointers geupdate met mogelijke nieuwe roots van de subtrees, nu moeten we nog ervoor zorgen dat alles in balans raakt. Er is maar 1 node toegevoegd, dus het hoogteverschil tussen links en rechts kan nooit meer dan 2 zijn (1 was al toegestaan, plus de node die is toegevoegd). Dit hoogteverschil kunnen we terugbrengen naar 1 en er weer een geldige AVL subtree van maken. Maar dan moeten we wel eerst kijken met welk van onderstaande vier gevallen we te maken hebben:</p>
 
     <h3>Links is te zwaar</h3>
 
@@ -110,9 +113,7 @@
     <p>Is rechts zwaarder, dan voer je een rotatie uit naar links over de root. Dit is ook het geval als in het rechterkind links en rechts even zwaar zijn</p>
     <hr style="clear: both;">
 
-    <p>Controleer met welk geval je te maken hebt door <code>depth</code> aan te roepen op de relevante nodes, en roteer de boom volgens bovenstaande regels bij elke aanroep van insertAVL. Als de subtree al AVL gebalanceerd is hoef je uiteraard niks te doen.</p>
-
-    <p>Test je boom door er de getallen 1 tot en met 100 aan toe te voegen in oplopende volgorde. Als dit resulteert in een gebalanceerde boom heb je de opdracht goed gedaan!</p>
+    <p>Controleer met welk geval je te maken hebt door <code>depth()</code> aan te roepen op de relevante nodes, en roteer de boom volgens bovenstaande regels bij elke aanroep van insertAVL. Als de subtree al AVL gebalanceerd is hoef je uiteraard niks te doen.</p>
 
   </div>
 </body>
