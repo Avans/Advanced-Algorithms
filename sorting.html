@@ -97,9 +97,12 @@
 
     <p>Als je het partitioneer algoritme afhebt kan je daar gebruik van maken in je <code>quicksort()</code> methode zoals beschreven in de sheets. Let op dat je de pivot zelf niet meer hoeft mee te nemen in de recursieve aanroep.</p>
 
+
     <h2>Mergesort (40pt)</h2>
 
     <p>Voor het maken van <code>mergesort()</code> hoef je geen gebruik te maken van de <code>swap()</code> en <code>compare()</code> methodes in de <code>ISortList</code> interface. Mergesort is geen in-place algoritme dus je mag in je algoritme direct de waardes uit de array lezen en schrijven. Dit kun je doen door een instantie van <code>ISortList</code> te gebruiken alsof het een array is: <code>list[5]</code>. Onze hint is dan ook om gebruik te maken van hulp-arrays waar je vanuit (of naartoe) kunt mergen.</p>
+
+    <p>Net als Quicksort is deze methode een void. Het resultaat van de aanroep is ook niet een concrete returnwaarde, maar wel een resultaat: het gedeelte waarop mergesort is aangeroepen wordt volledig gesorteerd achtergelaten.</p>
 
     <h2>Wie is de snelste? (25pt)</h2>
 

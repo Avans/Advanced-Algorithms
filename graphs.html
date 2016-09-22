@@ -12,7 +12,7 @@
 
   </figure>
 
-  <p>Deze week gaan we beginnen met het <b>assessment</b>, de opgaven zullen dus niet in de les afgetekend worden maar laat je in de tentamenweek tijdens het assessment nakijken.</p>
+  <p>De opdracht van deze week en volgende week zullen ietsjes anders zijn. We geven jullie hier namelijk geen unit tests voor en ze worden niet individueel nagekeken. Je mag deze opdracht dus in <b>duo's</b> doen. De opdrachten hoeven ook niet meer persé in C# gemaakt te worden, je mag ook een andere programmeertaal kiezen.</p>
 
   <p>De opdracht is om een rogue-like text-adventure te maken. In dit spel ben je een held die door een kerker loopt met allemaal kamertjes die via de richtingen noord, zuid, oost en west met elkaar verbonden zijn.
 
@@ -36,11 +36,11 @@ Acties: noord, oost, west, talisman, handgranaat
 -> noord</code>
 
 
-  <p>In de rogue-like moeten jullie kamertjes maken die met doorgangen met elkaar verbonden zijn. Als je de kamers beschouwt als vertices en de doorgangen als edges kun je de kaart van het spel als een undirected unweighted graph beschouwen. <b>Je mag de opdracht combineren met de eindopdracht die je voor C++ moet maken.</b>. Er zal echter een apart assessment worden ingepland voor ALG2.</p>
+  <p>In de rogue-like moeten jullie kamertjes maken die met doorgangen met elkaar verbonden zijn. Als je de kamers beschouwt als vertices en de doorgangen als edges kun je de kaart van het spel als een undirected unweighted graph beschouwen. <b>Je mag de opdracht combineren met de eindopdracht die je voor C++ moet maken.</b>. Er zal echter een apart assessment worden ingepland voor ALGA.</p>
 
   <hr style="clear: both">
   <div class="assignment">
-    <h2>Breadth-first search</h2>
+    <h2>Breadth-first search (50pt)</h2>
     <img src="static/img/talisman.jpg" class="right">
 
     <p>Voeg het item '<i>magische talisman</i>' toe aan het spel die de held van het spel altijd bij zich heeft. Als de held de talisman raadpleegt vertelt deze hoeveel stappen ver weg de trap omhoog is. Als de held in de kamer met de trap omhoog is is dat 0 stappen, de kamer ernaast 1 stap enzovoorts.</p>
@@ -54,12 +54,12 @@ De talisman licht op en fluistert dat de trap omhoog 5 kamers ver weg is</code>
   </div>
 
   <div class="assignment">
-    <h2>Minimum spanning tree</h2>
+    <h2>Minimum spanning tree (60pt)</h2>
     <img src="static/img/grenade.jpg" class="right">
 
     <p>Voeg een item '<i>handgraat</i>' toe die de held kan gebruiken om de tegenstander in een kamer in 1 klap te doden. Echter, als hij deze gebruikt heeft dat desastreuze gevolgen voor de kerker. Zorg ervoor dat als de held een handgranaat gebruikt tussen de 10-15 doorgangen op het huidige niveau in de kerker <b>geblokkeerd</b> worden. Deze ingestorte doorgangen geef je op de kaart aan met een <code class="term">~</code> tekentje. De speler kan ingestorte doorgangen niet meer passeren.</p>
 
-    <p>Echter, de kerker is magisch en zal altijd <i>net</i> genoeg structurele integriteit behouden om alle kamers vanuit alle kamers bereikbaar te houden. Maar mogelijk wel met een omweg dus.</p>
+    <p>Echter, de kerker is magisch en zal altijd <i>net</i> genoeg structurele integriteit behouden <b>om alle kamers vanuit alle kamers bereikbaar te houden</b>. Maar mogelijk wel met een omweg dus.</p>
 
     <code class="terminal">-> handgranaat
 
@@ -71,11 +71,9 @@ De kerker schudt op zijn grondvesten, alle tegenstanders in de kamer zijn versla
 
 Je vreest dat een extra handgranaat een cruciale passage zal blokkeren. Het is beter om deze niet meer te gebruiken op deze verdieping.</code>
 
-    <p>Bepaal welke doorgangen je nog kan opblazen door eerst de <b>minimum spanning tree</b> van de huidige verdieping van de kerker te bepalen. Doe dit door middel van het algoritme van <a href="https://en.wikipedia.org/wiki/Prim%27s_algorithm">Prim</a> of <a href="https://en.wikipedia.org/wiki/Kruskal%27s_algorithm">Kruskal</a>. Je mag zelf kiezen welke van de twee je implementeert in jouw spel. Alle doorgangen die niet in een minimum spanning tree voorkomen zijn veilig om te laten instorten.</p>
+    <p>Bepaal welke doorgangen je nog kan opblazen door eerst de <b>minimum spanning tree</b> van de huidige verdieping van de kerker te bepalen. Doe dit door middel van het algoritme van <a href="https://en.wikipedia.org/wiki/Prim%27s_algorithm">Prim</a> of <a href="https://en.wikipedia.org/wiki/Kruskal%27s_algorithm">Kruskal</a>. Je mag zelf kiezen welke van de twee je implementeert in jouw spel. Alle doorgangen die <b>niet</b> in een minimum spanning tree voorkomen zijn veilig om te laten instorten.</p>
 
     <p>Bouw ook een cheatmode in om de hele kaart in één keer te tonen zodat we tijdens het assessment kunnen controleren of je de juiste doorgangen laat instorten</p>
-
-    <p><b>Bonus:</b> Maak het de speler extra moeilijk door de ingestorte doorgangen zo dicht mogelijk in de buurt van de held te laten voorkomen. Kies de niet-cruciale doorgangen die het dichtst bij de held liggen om te laten instorten.</p>
   </div>
 
 </body>
