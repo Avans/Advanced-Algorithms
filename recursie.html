@@ -11,7 +11,7 @@
     <img src="static/img/testexplorer.png" style="width: 100%;">
   </figure>
 
-  <p>Welkom bij het vak Algoritmiek 2! Deze eerste week gaan we kijken naar een belangrijke techniek die we voor alle komende weken weer gaan gebruiken. <a href="https://en.wikipedia.org/wiki/Recursion">Recursie</a>! In alle volgende weken gaan we met recursie te maken hebben, zorg er dus voor dat je goed doorhebt hoe het werkt. (wil je meer informatie over recursie? klik dan <a href=".#/recursie.html" target="_blank">hier</a>)</p>
+  <p>Welkom bij het vak Advanced Algorithms! Deze eerste week gaan we kijken naar een belangrijke techniek die we voor alle komende weken weer gaan gebruiken. <a href="https://en.wikipedia.org/wiki/Recursion">Recursie</a>! In alle volgende weken gaan we met recursie te maken hebben, zorg er dus voor dat je goed doorhebt hoe het werkt. (wil je meer informatie over recursie? klik dan <a href=".#/recursie.html" target="_blank">hier</a>)</p>
 
   <p>De <b>opdrachten</b> voor dit vak lever je in via GitHub. We zetten elke week een template project voor je klaar, en jouw taak dit blok is om dit project aan te vullen zodat alle unit tests werken. Werken ze allemaal? Dan heb je een 10 voor dit vak, failen ze allemaal? Dan heb je een 0. Zo simpel is het! Sommige opdrachten zijn met opzet wat lastiger, als je daar niet uitkomt kan je ze overslaan en nog steeds veilig voor de 7 gaan.</p>
 
@@ -48,7 +48,7 @@
     <p>Wat formeler: De functie <img src="http://latex.codecogs.com/svg.latex?$driehoeksgetal$(n)"> is gedefinieerd als <img src="http://latex.codecogs.com/svg.latex?n + (n-1) + (n-2) + ... + 3 + 2 + 1 + 0">. Bijvoorbeeld: <img src="http://latex.codecogs.com/svg.latex?$driehoeksgetal$(6) = 6 + 5 + 4 + 3 + 2 + 1 + 0 = 21">. Je kan de functie ook recursief definiëren als: <img src="http://latex.codecogs.com/svg.latex?$driehoeksgetal$(n) = n + $driehoeksgetal$(n - 1), $driehoeksgetal$(0) = 0"></p>
 
     <ol>
-      <li><b>10pt.</b> Schrijf de functie <code>triangular_number_iterative</code> zodat deze werkt op bovenstaande manier. Doe dit op een <b>iteratieve</b> manier (dus met loopjes, niet met jezelf aanroepen)</li>
+      <li><b>5pt.</b> Schrijf de functie <code>triangular_number_iterative</code> zodat deze werkt op bovenstaande manier. Doe dit op een <b>iteratieve</b> manier (dus met loopjes, niet met jezelf aanroepen)</li>
       <li><b>10pt.</b> Schrijf de functie <code>triangular_number_recursive</code> op een <b>recursieve</b> manier. De functie mag alleen gebruik maken van zichzelf en niet met loopjes werken.</li>
       <li><b>5pt.</b> Schrijf de functie <code>triangular_number_function</code> zonder loopjes en recursie. Op de wikipagina staat een formule waarmee je driehoeksgetallen kan berekenen.</li>
       <li><b>0pt.</b> Test alledrie de functies met grote waardes voor <code>n</code>. Welke manier is het snelst? Welke het langzaamst?</li>
@@ -77,8 +77,8 @@
     <ol>
       <li><b>0pt.</b> Leg kort uit hoe je de functie op een recursieve manier kan definiëren.</li>
       <li><b>10pt.</b> Schrijf de functie <code>fibonacci_recursive</code> op een recursieve manier</li>
-      <li><b>10pt.</b> Schrijf de functie <code>fibonacci_iterative</code> op een iteratieve manier</li>
-      <li><b>5pt.</b> Test weer beide functies met grote waardes. Welke manier is sneller? Geef je antwoord door in <code>which_is_faster</code> de juiste enum waarde terug te geven.</li>
+      <li><b>5pt.</b> Schrijf de functie <code>fibonacci_iterative</code> op een iteratieve manier</li>
+      <li><b>10pt.</b> Test weer beide functies met grote waardes. Welke manier is sneller? Geef je antwoord door in <code>which_is_faster</code> de juiste enum waarde terug te geven.</li>
     </ol>
   </div>
 
@@ -115,7 +115,7 @@
     </ul>
 
     <ol>
-      <li><b>15pt.</b> Schrijf de functie <code>sierpinski_carpet</code> op een recursieve manier.</li>
+      <li><b>20pt.</b> Schrijf de functie <code>sierpinski_carpet</code> op een recursieve manier.</li>
       <li><b>0pt.</b> Hoeveel niveau's kan jouw computer aan? Hoeveel vierkantjes moet het dan tekenen?</li>
     </ol>
   </div>
@@ -143,7 +143,7 @@
 
     <ol>
       <li><b>10 pt.</b> Implementeer de functie op een recursieve manier in de <code>collatz_recursive()</code> methode</li>
-      <li><b>10 pt.</b> Implementeer de functie op een iteratieve manier in de <code>collatz_iterative()</code> methode</li>
+      <li><b>5 pt.</b> Implementeer de functie op een iteratieve manier in de <code>collatz_iterative()</code> methode</li>
   </div>
 
 </body>
