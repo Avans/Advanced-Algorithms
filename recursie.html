@@ -11,7 +11,7 @@
     <img src="static/img/testexplorer.png" style="width: 100%;">
   </figure>
 
-  <p>Welkom bij het vak Advanced Algorithms! Deze eerste week gaan we kijken naar een belangrijke techniek die we voor alle komende weken weer gaan gebruiken. <a href="https://en.wikipedia.org/wiki/Recursion">Recursie</a>! In alle volgende weken gaan we met recursie te maken hebben, zorg er dus voor dat je goed doorhebt hoe het werkt. (wil je meer informatie over recursie? klik dan <a href=".#/recursie.html" target="_blank">hier</a>)</p>
+  <p>Welkom bij het vak Advanced Algorithms! Deze eerste week gaan we kijken naar een belangrijke techniek die we voor alle komende weken weer gaan gebruiken. <a href="https://en.wikipedia.org/wiki/Recursion" target="_blank">Recursie</a>! In alle volgende weken gaan we met recursie te maken hebben, zorg er dus voor dat je goed doorhebt hoe het werkt. (wil je meer informatie over recursie? klik dan <a href=".#/recursie.html" target="_blank">hier</a>)</p>
 
   <p>De <b>opdrachten</b> voor dit vak lever je in via GitHub. We zetten elke week een template project voor je klaar, en jouw taak dit blok is om dit project aan te vullen zodat alle unit tests werken. Werken ze allemaal en kan je je implementatie goed toelichten tijdens het assessment? Dan heb je een 10 voor dit vak, failen ze allemaal? Dan heb je een 0. Sommige opdrachten zijn met opzet wat lastiger, als je daar niet uitkomt kan je ze overslaan en nog steeds veilig voor de 7 gaan.</p>
 
@@ -21,18 +21,18 @@
 
   <p>Ga nu naar onderstaande link toe en maak een versie kopie voor het project van week 1, clone het project lokaal en start met de eerste vraag!</p>
 
-  <a href="https://classroom.github.com/assignment-invitations/100b4594592f86ad1c0638db66b92e2a" class="github_link">GitHub: Week 1. Recursie</a>
+  <a href="https://classroom.github.com/assignment-invitations/100b4594592f86ad1c0638db66b92e2a" target="_blank" class="github_link">GitHub: Week 1. Recursie</a>
 
   <h3>Veel voorkomende problemen</h3>
 
   <p><b>Ik heb geen Visual Studio</b><br>
-  Voor dit vak kan je gebruik maken van de gratis <a href="https://www.visualstudio.com/post-download-vs?sku=community">Visual Studio Community Edition</a>. Je mag ook een uitgebreidere Visual Studio downloaden van de <a href="https://msdnaa.avans.nl/">msdnaa</a> site, maar dat is dus niet nodig voor dit vak.</p>
+  Voor dit vak kan je gebruik maken van de gratis <a href="https://www.visualstudio.com/post-download-vs?sku=community" target="_blank">Visual Studio Community Edition</a>. Je mag ook een uitgebreidere Visual Studio downloaden van de <a href="https://msdnaa.avans.nl/" target="_blank">msdnaa</a> site, maar dat is dus niet nodig voor dit vak.</p>
 
   <p><b>Ik probeer de tests te runnen, maar ik zie nergens de falende tests staan.</b><br>
    Zorg ervoor dat je <b>Test Explorer</b> open hebt staan. Dit kan je aanzetten via <i>Test > Windows Test Explorer</i></p>
 
    <p><b>Ik zie de Test Explorer, maar ik zie nog steeds geen tests als ik op <i>Run All</i> heb geklikt.</b><br>
-  Het project maakt gebruik van Nunit voor de unit tests (in verband met het automatisch testen). Die zouden automatisch gevonden moeten worden via de Nunit3TestAdapter package die al in het test project zit. Mocht dit om wat voor reden niet werken dan kan je jezelf uit de brand helpen door de <a href="https://visualstudiogallery.msdn.microsoft.com/0da0f6bd-9bb6-4ae3-87a8-537788622f2d">Nunit 3 Test Adapter</a> Visual Studio Extension te downloaden.</p>
+  Het project maakt gebruik van Nunit voor de unit tests (in verband met het automatisch testen). Die zouden automatisch gevonden moeten worden via de Nunit3TestAdapter package die al in het test project zit. Mocht dit om wat voor reden niet werken dan kan je jezelf uit de brand helpen door de <a href="https://visualstudiogallery.msdn.microsoft.com/0da0f6bd-9bb6-4ae3-87a8-537788622f2d" target="_blank">Nunit 3 Test Adapter</a> Visual Studio Extension te downloaden.</p>
 
 
   <div class="assignment">
@@ -43,7 +43,7 @@
 
     <blockquote>0, 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, ...</blockquote>
 
-    <p>Dit zijn de zogenaamde <a href="https://nl.wikipedia.org/wiki/Driehoeksgetal">driehoeksgetallen</a>. Bij 0 tel je 1 op om 1 te krijgen. Daar tel je 2 bij op om 3 te krijgen, dan tel je er 3 bij op, dan 4. etc etc. Je kan dit ook zien als het aantal balletjes in een 2d pyramide.</p>
+    <p>Dit zijn de zogenaamde <a href="https://nl.wikipedia.org/wiki/Driehoeksgetal" target="_blank">driehoeksgetallen</a>. Bij 0 tel je 1 op om 1 te krijgen. Daar tel je 2 bij op om 3 te krijgen, dan tel je er 3 bij op, dan 4. etc etc. Je kan dit ook zien als het aantal balletjes in een 2d pyramide.</p>
 
     <p>Wat formeler: De functie <img src="http://latex.codecogs.com/svg.latex?$driehoeksgetal$(n)"> is gedefinieerd als <img src="http://latex.codecogs.com/svg.latex?n + (n-1) + (n-2) + ... + 3 + 2 + 1 + 0">. Bijvoorbeeld: <img src="http://latex.codecogs.com/svg.latex?$driehoeksgetal$(6) = 6 + 5 + 4 + 3 + 2 + 1 + 0 = 21">. Je kan de functie ook recursief definiëren als: <img src="http://latex.codecogs.com/svg.latex?$driehoeksgetal$(n) = n + $driehoeksgetal$(n - 1), $driehoeksgetal$(0) = 0"></p>
 
@@ -61,7 +61,7 @@
 
     <img src="static/img/fibonacci.png" class="right">
 
-    <p>De <a href="https://nl.wikipedia.org/wiki/Rij_van_Fibonacci">rij van Fibonacci</a> krijg je door elke keer de vorige twee cijfers bij elkaar op te tellen, je begint de rij met 0 en 1:</p>
+    <p>De <a href="https://nl.wikipedia.org/wiki/Rij_van_Fibonacci" target="_blank">rij van Fibonacci</a> krijg je door elke keer de vorige twee cijfers bij elkaar op te tellen, je begint de rij met 0 en 1:</p>
 
     <blockquote>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...</blockquote>
 
@@ -94,7 +94,7 @@
     <ol>
       <li><b>10pt.</b> Schrijf de recursieve functie <code>string_reverse</code> die een String als invoer heeft en de omgekeerde string teruggeeft.</li>
       <li><b>0pt.</b> Wat is de base case van deze functie? (dus het kleinste probleem geval waarbij je niet jezelf meer hoeft aan te roepen)</li>
-      <li><b>10pt.</b>Schrijf de recursieve functie <code>is_palindrome</code> die teruggeeft of een woord een <a href="https://nl.wikipedia.org/wiki/Palindroom">palindroom</a> is of niet. Die functie mag weer alleen gebruik maken van zichzelf en geen loopjes bevatten.</li>
+      <li><b>10pt.</b>Schrijf de recursieve functie <code>is_palindrome</code> die teruggeeft of een woord een <a href="https://nl.wikipedia.org/wiki/Palindroom" target="_blank">palindroom</a> is of niet. Die functie mag weer alleen gebruik maken van zichzelf en geen loopjes bevatten.</li>
     </ol>
   </div>
 
@@ -104,7 +104,7 @@
 
     <p><i>Voor deze opdracht moet je het project <code>1-Recursion-Sierpinski</code> het hoofdproject maken. Dit doe je door er rechts op te klikken en te kiezen voor <b>Set as StartUp Project</b></i></p>
 
-    <p>Het <a href="https://nl.wikipedia.org/wiki/Tapijt_van_Sierpi%C5%84ski">Tapijt van Sierpiński</a> is een <a href="https://nl.wikipedia.org/wiki/Fractal">fractal</a> die je kan maken door acht vierkanten te tekenen rondom een middelste vierkant dat je niet tekent. Dit herhaal je ad infinitum voor elk van deze subvierkanten. (Er is ook een versie waarbij je juist alleen maar het middelste vierkant tekent. Maar die gaan we niet maken, daar staan al teveel voorbeelden van op internet ;) ).</p>
+    <p>Het <a href="https://nl.wikipedia.org/wiki/Tapijt_van_Sierpi%C5%84ski" target="_blank">Tapijt van Sierpiński</a> is een <a href="https://nl.wikipedia.org/wiki/Fractal" target="_blank">fractal</a> die je kan maken door acht vierkanten te tekenen rondom een middelste vierkant dat je niet tekent. Dit herhaal je ad infinitum voor elk van deze subvierkanten. (Er is ook een versie waarbij je juist alleen maar het middelste vierkant tekent. Maar die gaan we niet maken, daar staan al teveel voorbeelden van op internet ;) ).</p>
 
     <p>We hebben al een WPF project voor je klaargezet, het enige wat je hoeft te doen om de <code>sierpinski_carpet</code> functie te schrijven. Deze functie wordt aangeroepen met de volgende parameters:</p>
 
@@ -124,7 +124,7 @@
     <h2>Het vermoeden van Collatz</h2>
     <img src="static/img/collatz_conjecture.png" class="right">
 
-    <p>Het <a href="https://nl.wikipedia.org/wiki/Vermoeden_van_Collatz">vermoeden van Collatz</a> is dat je voor elk positief getal bij 1 uitkomt als je de volgende procedure toepast:</p>
+    <p>Het <a href="https://nl.wikipedia.org/wiki/Vermoeden_van_Collatz" target="_blank">vermoeden van Collatz</a> is dat je voor elk positief getal bij 1 uitkomt als je de volgende procedure toepast:</p>
 
     <ul>
       <li>Deel het getal door 2 als het even is</li>
