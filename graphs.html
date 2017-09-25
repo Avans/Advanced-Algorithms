@@ -37,6 +37,29 @@ Acties: noord, oost, west, talisman, handgranaat
 
 
   <p>In de rogue-like moeten jullie kamertjes maken die met doorgangen met elkaar verbonden zijn. Als je de kamers beschouwt als vertices en de doorgangen als edges kun je de kaart van het spel als een undirected unweighted graph beschouwen.</p>
+  
+  <p>Het programma hoeft geen gehele speelbare game te zijn, maar dit moet het minimaal kunnen:</p>
+<ul>
+<li>Dungeon bestaat uit X * Y kamers, de X en Y component zijn instelbaar in de game door de gebruiker.</li>
+<li>De dungeon wordt random ge&iuml;nitialiseerd met kamers, hallways en tegenstanders, maar alle kamers moeten te bezoeken zijn.</li>
+<li>Elke kamer kan een tegenstander bevatten (bijvoorbeeld van level 0 tot en met level 9).</li>
+<li>Er is een mogelijkheid om in de game het start- en eindpunt in de dungeon te wijzigen.</li>
+<li>Het is mogelijk om de Dungeon te tonen op het scherm. Hierin is te zien:
+<ul>
+<li>Waar de kamers zijn.</li>
+<li>Waar het start- en eindpunt is.</li>
+<li>Wat voor level een tegenstader in een kamer heeft.</li>
+<li>Waar de hallways zitten tussen de kamers.</li>
+<li>Of de hallways intact of ingestort zijn.</li>
+<li>Een manier om aan te geven of een kamer bezocht is.</li>
+<li>Een manier om aan te geven of een kamer deel is van de kortste/goedkoopste route.</li>
+<li>Dit alles het lieftste in &eacute;&eacute;n overzichtelijk kaartje.</li>
+</ul>
+</li>
+<li>Via commando's moet ik de talisman (Week 5, BFS), handgranaat (Week 5, MST) en het kompas (Week 6, Dijkstra) kunnen gebruiken.</li>
+</ul>
+<p>Je hoeft dus niet te bouwen dat er rondgelopen kan worden met een hero en dat deze kan gaan vechten met de tegenstanders.</p>
+<p>De weights zijn de levels van de tegenstanders in de kamers. De levels zijn dus de cost, die verbruikt wordt bij het bezoe
 
   <hr style="clear: both">
   <div class="assignment">
