@@ -7,20 +7,20 @@
 <body>
   <h1>Self-balancing binary search tree</h1>
 
-  <a href="https://classroom.github.com/assignment-invitations/a04b4fa91f913c630c71e4598a281548" class="github_link">Github: Week 4. AVL</a>
+  <a href="https://classroom.github.com/assignment-invitations/a04b4fa91f913c630c71e4598a281548" target="_blank" class="github_link">Github: Week 4. AVL</a>
 
-  <p>Binary trees kan je snel in zoeken en toevoegen, <em>mits</em> ze gebalanceerd zijn. Als elke node een rechterkind van de vorige node is 'hangt' de boom erg naar rechts toe en moet je nog steeds potentieel alle nodes doorlopen om toe te voegen en te zoeken. <a href="https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree">Self-balancing binary search trees</a> proberen dit probleem op te lossen door na elke toevoeging de boom te 'fixen' zodat deze niet ongebalanceerd raakt.</p>
+  <p>Binary trees kan je snel in zoeken en toevoegen, <em>mits</em> ze gebalanceerd zijn. Als elke node een rechterkind van de vorige node is 'hangt' de boom erg naar rechts toe en moet je nog steeds potentieel alle nodes doorlopen om toe te voegen en te zoeken. <a href="https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree" target="_blank">Self-balancing binary search trees</a> proberen dit probleem op te lossen door na elke toevoeging de boom te 'fixen' zodat deze niet ongebalanceerd raakt.</p>
 
   <figure style="float: right; width: 20%">
     <img src="static/img/unbalanced.png" style="width: 100%;">
     <figcaption style="color: #888; font-size: small; font-style: italic; text-align: center;">Een ongebalanceerde boom</figcaption>
   </figure>
 
-  <p>Dit fixen gebeurd met zogenaamde <a href="https://en.wikipedia.org/wiki/Tree_rotation">boom rotaties</a>. Een techniek waarbij je nodes verplaatst in de boom, zonder de volgorde van de nodes te verwisselen. <a href="https://en.wikipedia.org/wiki/Tree_rotation#/media/File:Tree_rotation_animation_250x250.gif">Dit plaatje</a> laat mooi zien wat er gebeurd als je nodes linksom of rechtsom roteert.</p>
+  <p>Dit fixen gebeurd met zogenaamde <a href="https://en.wikipedia.org/wiki/Tree_rotation" target="_blank">boom rotaties</a>. Een techniek waarbij je nodes verplaatst in de boom, zonder de volgorde van de nodes te verwisselen. <a href="https://en.wikipedia.org/wiki/Tree_rotation#/media/File:Tree_rotation_animation_250x250.gif" target="_blank">Dit plaatje</a> laat mooi zien wat er gebeurd als je nodes linksom of rechtsom roteert.</p>
 
   <p>Als we in de boom hier rechts bijvoorbeeld een rotatie linksom doen op de root 0 dan wordt het rechterkind 2 de nieuwe root, 0 wordt een linkerkind van 2. En 1 wordt een rechterkind van 0. Daarmee is de boom iets minder uit balans, en is het nog steeds een geldige binary search tree.</p>
 
-  <p>Een self-balancing binary search tree probeert na elke insert en delete de boom weer terug in balans te brengen door rotaties uit te voeren. Deze week gaan we kijken naar één van de eerste technieken die hier voor zijn uitgevonden: de <a href="https://en.wikipedia.org/wiki/AVL_tree">AVL tree.</a></p>
+  <p>Een self-balancing binary search tree probeert na elke insert en delete de boom weer terug in balans te brengen door rotaties uit te voeren. Deze week gaan we kijken naar één van de eerste technieken die hier voor zijn uitgevonden: de <a href="https://en.wikipedia.org/wiki/AVL_tree" target="_blank">AVL tree.</a></p>
 
   <h4>Pretty printing</h4>
   <p>Om je te helpen hebben we vast de methode <code>prettyprint()</code> gemaakt die de structuur van de boom in de console print. De eerste node die die print is de rechternode, de tweede de linkernode. Dat lijkt verkeerd om, maar als je je hoofd een beetje linksom draait dan staat alles zoals in de plaatjes!</p>
